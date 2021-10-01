@@ -1,0 +1,12 @@
+<app-petit  [petitProperty]="color" (envoyerDemandeAMonPere)="processReq($event)"></app-petit>
+
+<div id="carre" [style.backgroundColor]="color">coleur</div>
+<input #inputColor (change)="changeColor(inputColor)" type="text" class="form-control"
+ aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+
+ <div id="carre" [style.backgroundColor]="color2">coleur2</div>
+ <input [(ngModel)]="color2" type="text" class="form-control"
+ aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+
+ mon couleur est : {{ color2 }}
+
