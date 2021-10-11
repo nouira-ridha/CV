@@ -1,0 +1,13 @@
+<p [ngStyle]="{
+'color': color,
+'backgroundColor': bgColor,
+'fontSize': size
+}">
+HELLO
+</p>
+<input type="text" class="form-control"  aria-describedby="basic-addon3" [(ngModel)]="color">
+<p></p>
+<input type="text" class="form-control"  aria-describedby="basic-addon3" [(ngModel)]="bgColor">
+<p></p>
+<input type="number" class="form-control" #sizInput
+       (change)="changeSize(sizInput.value)">

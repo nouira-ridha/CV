@@ -10,6 +10,7 @@ import { CvComponent } from './cvTeck/cv/cv.component';
 import { ListeCvComponent } from './cvTeck/liste-cv/liste-cv.component';
 import { ItemCvComponent } from './cvTeck/item-cv/item-cv.component';
 import { DetailCvComponent } from './cvTeck/detail-cv/detail-cv.component';
+import { StyleComponent } from './derective/style/style.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DetailCvComponent } from './cvTeck/detail-cv/detail-cv.component';
     CvComponent,
     ListeCvComponent,
     ItemCvComponent,
-    DetailCvComponent
+    DetailCvComponent,
+    StyleComponent
   ],
   imports: [
     BrowserModule,

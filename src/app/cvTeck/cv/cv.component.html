@@ -2,13 +2,17 @@
   <div class="row gx-5">
     <div class="col">
       <div class="p-3 border bg-light">
-        <app-liste-cv></app-liste-cv>
+        <app-liste-cv (selectedPersonne)="selectPersonne($event)" [personnes]="personnes"></app-liste-cv>
       </div>
     </div>
     <div class="col">
       <div class="p-3 border bg-light">
-        <app-detail-cv></app-detail-cv>
+        <app-detail-cv [personne]="selectedPersonne"></app-detail-cv>
       </div>
     </div>
   </div>
+  <div class="row gx-5">
+    <app-style [bgColor]="'red'" [color]="'pink'"></app-style>
+  </div>
 </div>
+
