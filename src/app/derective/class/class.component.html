@@ -1,0 +1,15 @@
+<p [ngClass]="{'usm':usm, 'barca':barca, 'liverpool':liverpool}">
+  {{nomEquipe}}
+</p>
+<button type="button" class="btn btn-primary" (click)="changeToUsm()">USM</button>
+<button type="button" class="btn btn-warning" (click)="changeToBarca()">Barca</button>
+<button type="button" class="btn btn-danger" (click)="changeToLiverpool()">Liverpool</button>
+<div appHighlight>
+  Bonjour je teste un Attribute Directives
+</div>
+<div>
+  Bonjour je teste un Attribute Directives avancé
+<div class="input-group mb-3">
+  <input type="text" class="form-control" appRainbow>
+</div>
+</div>

@@ -1,0 +1,24 @@
+.usm{
+  color: white;
+  background-color: dodgerblue;
+}
+.barca{
+  color: darkred;
+  background-color: rebeccapurple;
+}
+.liverpool{
+  color: green;
+  background-color: red;
+}
+.btn-warning{
+  color: darkred;
+  background-color: rebeccapurple;
+}
+.btn-danger{
+  color: green;
+  background-color: red;
+}
+.btn-primary{
+  color: white;
+  background-color: dodgerblue;
+}
