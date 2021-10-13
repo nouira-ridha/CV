@@ -11,6 +11,9 @@ import { ListeCvComponent } from './cvTeck/liste-cv/liste-cv.component';
 import { ItemCvComponent } from './cvTeck/item-cv/item-cv.component';
 import { DetailCvComponent } from './cvTeck/detail-cv/detail-cv.component';
 import { StyleComponent } from './derective/style/style.component';
+import { ClassComponent } from './derective/class/class.component';
+import { HighlightDirective } from './derective/highlight.directive';
+import { RainbowDirective } from './derective/rainbow.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { StyleComponent } from './derective/style/style.component';
     ListeCvComponent,
     ItemCvComponent,
     DetailCvComponent,
-    StyleComponent
+    StyleComponent,
+    ClassComponent,
+    HighlightDirective,
+    RainbowDirective
   ],
   imports: [
     BrowserModule,
