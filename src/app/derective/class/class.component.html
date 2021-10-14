@@ -10,6 +10,13 @@
 <div>
   Bonjour je teste un Attribute Directives avancé
 <div class="input-group mb-3">
-  <input type="text" class="form-control" appRainbow>
+  <input *ngIf="show" type="text" class="form-control" appRainbow>
 </div>
+  <button type="button" class="btn btn-danger" (click)="show = !show">*ngIf</button>
 </div>
+
+<h1>*ngFor</h1>
+
+<ol *ngFor="let team of teams">
+  <li class="list-group-item">{{team}}</li>
+</ol>
