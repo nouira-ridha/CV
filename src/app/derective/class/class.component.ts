@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./class.component.css']
 })
 export class ClassComponent implements OnInit {
-usm = false;
-barca = true;
-liverpool = false;
-nomEquipe = '';
+  teams = [
+    'usm',
+    'barca',
+    'milan',
+    'liverpool',
+    'realMadrid',
+    'chelsee',
+    'juventus'
+    ];
+  usm = false;
+  barca = true;
+  liverpool = false;
+  nomEquipe = '';
+  show = true;
   constructor() { }
 
   ngOnInit(): void {

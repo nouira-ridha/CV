@@ -7,7 +7,8 @@
     </div>
     <div class="col">
       <div class="p-3 border bg-light">
-        <app-detail-cv [personne]="selectedPersonne"></app-detail-cv>
+        <app-detail-cv *ngIf="selectedPersonne"
+          [personne]="selectedPersonne"></app-detail-cv>
       </div>
     </div>
   </div>

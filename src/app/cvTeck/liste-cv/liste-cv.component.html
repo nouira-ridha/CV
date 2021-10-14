@@ -1,4 +1,6 @@
 <h6 class="text-muted">Liste CV Avec Images</h6>
 
-<app-item-cv (selectedPersonne)="selectPersonne($event)" [personne]="personnes[0]"></app-item-cv>
-<app-item-cv (selectedPersonne)="selectPersonne($event)" [personne]="personnes[1]"></app-item-cv>
+<app-item-cv *ngFor="let personne of personnes"
+  (selectedPersonne)="selectPersonne($event)"
+  [personne]="personne">
+  </app-item-cv>
