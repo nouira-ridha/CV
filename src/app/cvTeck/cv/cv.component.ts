@@ -15,7 +15,8 @@ export class CvComponent implements OnInit {
   ngOnInit(): void {
     this.personnes = [
       new Personne(1, 'nouira', 'ridha', 36, 'ridha.jpg', 77777777, 'developpeur'),
-      new Personne(2, 'waer', 'ahlem', 35, 'ahlem.jpg', 66666666, 'pharmacienne')
+      new Personne(2, 'waer', 'ahlem', 35, 'ahlem.jpg', 66666666, 'pharmacienne'),
+      new Personne(3, 'test', 'pipe', 12, '', 44444444, 'testPipe'),
     ];
   }
   selectPersonne(personne){
