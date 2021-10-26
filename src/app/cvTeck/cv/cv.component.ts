@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Personne} from '../../model/personne';
 import {PremierService} from '../../premier.service';
+import {CvService} from '../cv.service';
 
 @Component({
   selector: 'app-cv',
@@ -11,14 +12,10 @@ export class CvComponent implements OnInit {
 
   personnes: Personne [];
   selectedPersonne: Personne;
-  constructor(private premierService: PremierService) { }
+  constructor(private premierService: PremierService, private cvService: CvService) { }
 
   ngOnInit(): void {
-    this.personnes = [
-      new Personne(1, 'nouira', 'ridha', 36, 'ridha.jpg', 77777777, 'developpeur'),
-      new Personne(2, 'waer', 'ahlem', 35, 'ahlem.jpg', 66666666, 'pharmacienne'),
-      new Personne(3, 'test', 'pipe', 12, '', 44444444, 'testPipe'),
-    ];
+    this.personnes = this.cvService.getPersonne();
     this.premierService.addData('data from cv component');
     this.premierService.logger(this.personnes);
 

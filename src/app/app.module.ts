@@ -15,6 +15,7 @@ import { ClassComponent } from './derective/class/class.component';
 import { HighlightDirective } from './derective/highlight.directive';
 import { RainbowDirective } from './derective/rainbow.directive';
 import { DefaultImagePipe } from './cvTeck/default-image.pipe';
+import { EmbaucherComponent } from './cvTeck/embaucher/embaucher.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DefaultImagePipe } from './cvTeck/default-image.pipe';
     ClassComponent,
     HighlightDirective,
     RainbowDirective,
-    DefaultImagePipe
+    DefaultImagePipe,
+    EmbaucherComponent
   ],
   imports: [
     BrowserModule,
