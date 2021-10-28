@@ -1,4 +1,4 @@
-<app-petit  [petitProperty]="color" (envoyerDemandeAMonPere)="processReq($event)"></app-petit>
+<!--<app-petit  [petitProperty]="color" (envoyerDemandeAMonPere)="processReq($event)"></app-petit>-->
 
 <div id="carre" [style.backgroundColor]="color">coleur</div>
 <input #inputColor (change)="changeColor(inputColor)" type="text" class="form-control"
@@ -7,9 +7,27 @@
  <div id="carre" [style.backgroundColor]="color2">coleur2</div>
  <input [(ngModel)]="color2" type="text" class="form-control"
  aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-
  mon couleur est : {{ color2 }}
-
-<button type="button" class="btn btn-dark" (click)="loggerMesData()">ajouter data</button>
+<br>
+<div>
+  <button type="button" class="btn btn-dark" (click)="loggerMesData()">ajouter data "verifier dans console"</button>
+</div>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <button type="button" class="btn btn-primary" (click)="goToCv()">Go To CV</button>
+    </div>
+    <div class="col-sm">
+      <a (click)="goToNgStyle()">Go To NgStyle </a>
+    </div>
+    <div class="col-sm">
+      <a (click)="goToNgClass()">Go To Ng Class </a>
+    </div>
+    <div class="col-sm">
+      <button type="button" class="btn btn-danger" (click)="goToPetit()">Go To Petit</button>
+    </div>
+  </div>
+</div>
 
 

@@ -16,6 +16,9 @@ import { HighlightDirective } from './derective/highlight.directive';
 import { RainbowDirective } from './derective/rainbow.directive';
 import { DefaultImagePipe } from './cvTeck/default-image.pipe';
 import { EmbaucherComponent } from './cvTeck/embaucher/embaucher.component';
+import {ROUTING} from './app.routing';
+import { HeaderComponent } from './header/header.component';
+import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
 
 @NgModule({
   declarations: [
@@ -31,12 +34,15 @@ import { EmbaucherComponent } from './cvTeck/embaucher/embaucher.component';
     HighlightDirective,
     RainbowDirective,
     DefaultImagePipe,
-    EmbaucherComponent
+    EmbaucherComponent,
+    HeaderComponent,
+    RouterSimulatorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ROUTING
   ],
   providers: [],
   bootstrap: [AppComponent]
