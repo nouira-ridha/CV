@@ -19,6 +19,7 @@ import { EmbaucherComponent } from './cvTeck/embaucher/embaucher.component';
 import {ROUTING} from './app.routing';
 import { HeaderComponent } from './header/header.component';
 import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
+import { DetailPlusComponent } from './cvTeck/detail-plus/detail-plus.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { RouterSimulatorComponent } from './router-simulator/router-simulator.co
     DefaultImagePipe,
     EmbaucherComponent,
     HeaderComponent,
-    RouterSimulatorComponent
+    RouterSimulatorComponent,
+    DetailPlusComponent
   ],
   imports: [
     BrowserModule,
