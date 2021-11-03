@@ -10,6 +10,7 @@ const APP_ROUTING: Routes = [
   {path: 'cv', redirectTo: '/', pathMatch: 'full'},
   {path: '', component: CvComponent},
   {path: 'color', component: ColorComponent},
+  {path: 'color/:default', component: ColorComponent},
   {path: 'class', component: ClassComponent},
   {path: 'style', component: StyleComponent},
   {path: 'petit', component: PetitComponent},
