@@ -7,6 +7,7 @@ import {PetitComponent} from './petit/petit.component';
 import {DetailPlusComponent} from "./cvTeck/detail-plus/detail-plus.component";
 import {DeleteCvComponent} from "./cvTeck/delete-cv/delete-cv.component";
 import {AddCvComponent} from "./cvTeck/add-cv/add-cv.component";
+import {ErrorComponent} from "./error/error.component";
 
 
 const APP_ROUTING: Routes = [
@@ -22,7 +23,7 @@ const APP_ROUTING: Routes = [
   {path: 'class', component: ClassComponent},
   {path: 'style', component: StyleComponent},
   {path: 'petit', component: PetitComponent},
-  //{path: '**', component: ErrorComponent}
+  {path: '**', component: ErrorComponent}
 
 ];
 
