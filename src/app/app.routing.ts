@@ -5,12 +5,18 @@ import {ClassComponent} from './derective/class/class.component';
 import {StyleComponent} from './derective/style/style.component';
 import {PetitComponent} from './petit/petit.component';
 import {DetailPlusComponent} from "./cvTeck/detail-plus/detail-plus.component";
+import {DeleteCvComponent} from "./cvTeck/delete-cv/delete-cv.component";
+import {AddCvComponent} from "./cvTeck/add-cv/add-cv.component";
 
 
 const APP_ROUTING: Routes = [
-  {path: 'cv', redirectTo: '/', pathMatch: 'full'},
+      {path: 'cv', children: [
+          {path: '', component: CvComponent},
+          {path: 'add', component: AddCvComponent},
+          {path: 'delete/:id', component: DeleteCvComponent},
+          {path: ':id', component: DetailPlusComponent},
+        ]},
   {path: '', component: CvComponent},
-  {path: 'cv/:id', component: DetailPlusComponent},
   {path: 'color', component: ColorComponent},
   {path: 'color/:default', component: ColorComponent},
   {path: 'class', component: ClassComponent},

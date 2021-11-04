@@ -20,6 +20,8 @@ import {ROUTING} from './app.routing';
 import { HeaderComponent } from './header/header.component';
 import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
 import { DetailPlusComponent } from './cvTeck/detail-plus/detail-plus.component';
+import { AddCvComponent } from './cvTeck/add-cv/add-cv.component';
+import { DeleteCvComponent } from './cvTeck/delete-cv/delete-cv.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { DetailPlusComponent } from './cvTeck/detail-plus/detail-plus.component'
     EmbaucherComponent,
     HeaderComponent,
     RouterSimulatorComponent,
-    DetailPlusComponent
+    DetailPlusComponent,
+    AddCvComponent,
+    DeleteCvComponent
   ],
   imports: [
     BrowserModule,
