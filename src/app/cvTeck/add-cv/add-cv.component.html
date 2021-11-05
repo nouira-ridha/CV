@@ -1,1 +1,67 @@
-<p>add-cv works!</p>
+<div class="container">
+  <div class="main-body">
+
+    <div class="row gutters-sm">
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex flex-column align-items-center text-center">
+              <img src="assets/images/add.JPG" alt="Admin" class="rounded-circle" width="150">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card mb-3">
+          <div class="card-body">
+            <form #formulaire="ngForm">
+             <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Nom</h6>
+              </div>
+               <input id="name" type="text" ngModel name="name" class="form-control">
+            </div>
+             <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Prénom</h6>
+                </div>
+                <input id="firstname" type="text" ngModel name="firstname" class="form-control">
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Age</h6>
+                </div>
+                <input id="age" type="number" ngModel name="age" class="form-control">
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">CIN</h6>
+                </div>
+                <input id="cin" type="number" ngModel name="cin" class="form-control">
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Job</h6>
+                </div>
+                <input id="job" type="text" ngModel name="job" class="form-control">
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Photo</h6>
+                </div>
+                <input id="path" type="file" ngModel name="path" class="form-control">
+              </div>
+              <button type="button" class="btn btn-dark" (click)="addPersonne(formulaire)">Ajouter</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
