@@ -23,6 +23,7 @@ import { DetailPlusComponent } from './cvTeck/detail-plus/detail-plus.component'
 import { AddCvComponent } from './cvTeck/add-cv/add-cv.component';
 import { DeleteCvComponent } from './cvTeck/delete-cv/delete-cv.component';
 import { ErrorComponent } from './error/error.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ErrorComponent } from './error/error.component';
     DetailPlusComponent,
     AddCvComponent,
     DeleteCvComponent,
-    ErrorComponent
+    ErrorComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

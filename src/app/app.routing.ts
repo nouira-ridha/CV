@@ -8,6 +8,7 @@ import {DetailPlusComponent} from "./cvTeck/detail-plus/detail-plus.component";
 import {DeleteCvComponent} from "./cvTeck/delete-cv/delete-cv.component";
 import {AddCvComponent} from "./cvTeck/add-cv/add-cv.component";
 import {ErrorComponent} from "./error/error.component";
+import {LoginComponent} from "./login/login.component";
 
 
 const APP_ROUTING: Routes = [
@@ -18,6 +19,7 @@ const APP_ROUTING: Routes = [
           {path: ':id', component: DetailPlusComponent},
         ]},
   {path: '', component: CvComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'color', component: ColorComponent},
   {path: 'color/:default', component: ColorComponent},
   {path: 'class', component: ClassComponent},

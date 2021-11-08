@@ -1,0 +1,25 @@
+ <div class="container">
+   <div class="body">
+    <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <form #loginFormulaire="ngForm" class="box">
+          <h1>CONNEXION</h1>
+          <p class="text-muted"> Veuillez saisir votre login et mot de passe !</p>
+          <input email required type="text" ngModel="email" placeholder="Email utilisateur" class="form-control" id="email">
+          <input required type="password" ngModel="password"  placeholder="Mot de passe" class="form-control" id="password" minlength="4">
+          <a class="forgot text-muted" href="#">mot de passe oublié?</a>
+          <input type="submit" [disabled]="loginFormulaire.invalid" name="" value="Se connecter" >
+          <div class="col-md-12">
+            <ul class="social-network social-circle">
+              <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook-f"></i></a></li>
+              <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+ </div>
+</div>
