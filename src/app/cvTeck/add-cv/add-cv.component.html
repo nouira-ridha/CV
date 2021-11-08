@@ -19,7 +19,7 @@
               <div class="col-sm-3">
                 <h6 class="mb-0">Nom</h6>
               </div>
-               <input id="name" type="text" ngModel name="name" class="form-control">
+               <input required id="name" type="text" ngModel name="name" class="form-control">
             </div>
              <hr>
               <div class="row">
@@ -54,7 +54,7 @@
                 <div class="col-sm-3">
                   <h6 class="mb-0">Photo</h6>
                 </div>
-                <input id="path" type="file" ngModel name="path" class="form-control">
+                <input required id="path" type="file" ngModel name="path" class="form-control">
               </div>
               <button type="button" class="btn btn-dark" (click)="addPersonne(formulaire)">Ajouter</button>
             </form>
