@@ -19,49 +19,64 @@
               <div class="col-sm-3">
                 <h6 class="mb-0">Nom</h6>
               </div>
-               <input required id="name" type="text" ngModel name="name" class="form-control">
+               <input name required id="name" type="text" ngModel name="name" class="form-control" #nameInput="ngModel">
             </div>
+              <div class="alert alert-danger" *ngIf="nameInput.invalid && nameInput.touched">
+                Il faut saisir un nom !
+              </div>
              <hr>
               <div class="row">
                 <div class="col-sm-3">
                   <h6 class="mb-0">Prénom</h6>
                 </div>
-                <input id="firstname" type="text" ngModel name="firstname" class="form-control">
+                <input firstname required id="firstname" type="text" ngModel name="firstname" class="form-control" #firstNameInput="ngModel">
+              </div>
+              <div class="alert alert-danger" *ngIf="firstNameInput.invalid && firstNameInput.touched">
+                Il faut saisir un prénom !
               </div>
               <hr>
               <div class="row">
                 <div class="col-sm-3">
                   <h6 class="mb-0">Age</h6>
                 </div>
-                <input id="age" type="number" ngModel name="age" class="form-control">
+                <input age required min="1" max="150" id="age" type="number" ngModel name="age" class="form-control" #ageInput="ngModel">
+              </div>
+              <div class="alert alert-danger" *ngIf="ageInput.invalid && ageInput.touched">
+                Il faut saisir un age valide (entre 1ans et 150 ans) !
               </div>
               <hr>
               <div class="row">
                 <div class="col-sm-3">
                   <h6 class="mb-0">CIN</h6>
                 </div>
-                <input id="cin" type="number" ngModel name="cin" class="form-control">
+                <input cin required id="cin" type="text" ngModel name="cin" class="form-control" minlength="6" #cinInput="ngModel">
+              </div>
+              <div class="alert alert-danger" *ngIf="cinInput.invalid && cinInput.touched">
+                Il faut saisir un numéro de carte d'identité valide !
               </div>
               <hr>
               <div class="row">
                 <div class="col-sm-3">
                   <h6 class="mb-0">Job</h6>
                 </div>
-                <input id="job" type="text" ngModel name="job" class="form-control">
+                <input job required id="job" type="text" ngModel name="job" class="form-control" #jobInput="ngModel">
+              </div>
+              <div class="alert alert-danger" *ngIf="jobInput.invalid && jobInput.touched">
+                Il faut saisir un travail !
               </div>
               <hr>
               <div class="row">
                 <div class="col-sm-3">
                   <h6 class="mb-0">Photo</h6>
                 </div>
-                <input required id="path" type="file" ngModel name="path" class="form-control">
+                <input  id="path" type="file" ngModel name="path" class="form-control">
               </div>
-              <button type="button" class="btn btn-dark" (click)="addPersonne(formulaire)">Ajouter</button>
+              <button [disabled]="formulaire.invalid" type="button" class="btn btn-dark" (click)="addPersonne(formulaire)">Ajouter</button>
             </form>
           </div>
         </div>
-
       </div>
     </div>
   </div>
 </div>
+
