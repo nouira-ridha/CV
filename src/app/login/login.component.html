@@ -5,11 +5,30 @@
       <div class="card">
         <form #loginFormulaire="ngForm" class="box">
           <h1>CONNEXION</h1>
-          <p class="text-muted"> Veuillez saisir votre login et mot de passe !</p>
-          <input email required type="text" ngModel="email" placeholder="Email utilisateur" class="form-control" id="email">
-          <input required type="password" ngModel="password"  placeholder="Mot de passe" class="form-control" id="password" minlength="4">
+          <p> Veuillez saisir votre email et mot de passe !</p>
+          <input email required
+                 type="text"
+                 ngModel name="email"
+                 placeholder="Email utilisateur"
+                 class="form-control"
+                 id="email"
+                 #emailInput="ngModel">
+          <div class="alert alert-danger" *ngIf="emailInput.invalid && emailInput.touched">
+            Email n'est pas valide !
+          </div>
+          <input required
+                 type="password"
+                 ngModel name="password"
+                 placeholder="Mot de passe"
+                 class="form-control"
+                 id="password"
+                 minlength="4"
+                 #passwordInput="ngModel">
+          <div class="alert alert-danger" *ngIf="passwordInput.invalid && passwordInput.touched">
+            le mot de passe doit avoire au minimun 4 caractère !
+          </div>
           <a class="forgot text-muted" href="#">mot de passe oublié?</a>
-          <input type="submit" [disabled]="loginFormulaire.invalid" name="" value="Se connecter" >
+          <input type="submit" [disabled]="loginFormulaire.invalid" name="" value="Se connecter">
           <div class="col-md-12">
             <ul class="social-network social-circle">
               <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook-f"></i></a></li>
