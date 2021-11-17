@@ -24,6 +24,8 @@ import { AddCvComponent } from './cvTeck/add-cv/add-cv.component';
 import { DeleteCvComponent } from './cvTeck/delete-cv/delete-cv.component';
 import { ErrorComponent } from './error/error.component';
 import { LoginComponent } from './login/login.component';
+import { HttpComponent } from './http/http.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -46,12 +48,14 @@ import { LoginComponent } from './login/login.component';
     AddCvComponent,
     DeleteCvComponent,
     ErrorComponent,
-    LoginComponent
+    LoginComponent,
+    HttpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     ROUTING
   ],
   providers: [],
