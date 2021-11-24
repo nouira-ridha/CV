@@ -15,10 +15,19 @@ export class CvComponent implements OnInit {
   constructor(private premierService: PremierService, private cvService: CvService) { }
 
   ngOnInit(): void {
-    this.personnes = this.cvService.getPersonne();
+    this.cvService.getPersonne().subscribe(
+      (personnes) => {
+        this.personnes = personnes;
+      },
+      (error) => {
+        alert('probléme d\'acées aux API, les données affichées sont fake');
+        console.log(error);
+        this.personnes = this.cvService.getFakePersonne();
+
+      }
+    );
     this.premierService.addData('data from cv component');
     this.premierService.logger(this.personnes);
-
   }
   selectPersonne(personne){
     this.selectedPersonne = personne;
