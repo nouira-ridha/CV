@@ -29,8 +29,11 @@ export class CvService {
     });
     return personne;
   }
-  addPersonne(personne: Personne): void {
+  addPersonne(personne: Personne): Observable<any> {
+    return this.http.post(this.link, personne);
+  }
+  /*addFakePersonne(personne: Personne): void {
     personne.id = this.personnes[this.personnes.length - 1].id + 1;
     this.personnes.push(personne);
-  }
+  }*/
 }
