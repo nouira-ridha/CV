@@ -28,7 +28,7 @@
             le mot de passe doit avoire au minimun 4 caractère !
           </div>
           <a class="forgot text-muted" href="#">mot de passe oublié?</a>
-          <input type="submit" [disabled]="loginFormulaire.invalid" name="" value="Se connecter">
+          <input type="submit" [disabled]="loginFormulaire.invalid" name="" value="Se connecter" (click)="login(loginFormulaire.value)">
           <div class="col-md-12">
             <ul class="social-network social-circle">
               <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook-f"></i></a></li>
