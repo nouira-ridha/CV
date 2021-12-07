@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Personne} from '../model/personne';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from "rxjs";
 
 @Injectable({
@@ -27,11 +27,19 @@ export class CvService {
     return this.http.get<Personne>(this.link + `/${id}`);
   }
   addPersonne(personne: Personne): Observable<any> {
+    const token = localStorage.getItem('token');
+    if (token) {
+      const params = new HttpParams().set('access_token', token);
+      return this.http.post(this.link, personne, {params});
+    }
     return this.http.post(this.link, personne);
   }
   deletePersonne(id: number): Observable<any>{
     return this.http.delete(this.link + `/${id}`);
   }
+  /*addPersonne(personne: Personne): Observable<any> {
+    return this.http.post(this.link, personne);
+  }*/
   /*getFakePersonneById(id: number): Personne {
     const personne = this.personnes.find(personne => {
       return personne.id == id;
